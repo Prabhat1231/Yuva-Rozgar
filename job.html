@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details Form</title>
+    <link rel="stylesheet" href="job.css">
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="form-box">
+            <h2>Job Details Form</h2>
+            <form id="jobForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="jobid">Job ID</label>
+                        <input type="text" id="jobid" placeholder="Enter Job ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category">
+              <option value="">-- Select Category --</option>
+              <option>IT</option>
+              <option>HR</option>
+              <option>Sales</option>
+              <option>Marketing</option>
+              <option>Finance</option>
+            </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="desc">Description</label>
+                    <textarea id="desc" rows="3" placeholder="Enter job description"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Key Skills</label>
+                    <input type="text" id="skills" placeholder="Java, SQL, etc.">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="exp">Experience (Years)</label>
+                        <input type="number" id="exp" placeholder="e.g. 3">
+                    </div>
+                    <div class="form-group">
+                        <label for="edu">Education</label>
+                        <input type="text" id="edu" placeholder="BCA, MBA, etc.">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" placeholder="Min Age">
+                    </div>
+                    <div class="form-group">
+                        <label for="ctc">CTC (₹)</label>
+                        <input type="text" id="ctc" placeholder="Salary in Rupees">
+                    </div>
+                </div>
+
+                <button type="submit">Submit Job</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ✅ JavaScript Validation -->
+    <script>
+        document.getElementById("jobForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Stop form from submitting directly
+
+            let inputs = document.querySelectorAll("#jobForm input, #jobForm select, #jobForm textarea");
+            let isValid = true;
+
+            inputs.forEach(function(input) {
+                if (input.value.trim() === "") {
+                    isValid = false;
+                    input.style.border = "2px solid red"; // highlight empty box
+                } else {
+                    input.style.border = "1px solid #ccc"; // reset if filled
+                }
+            });
+
+            if (!isValid) {
+                alert("⚠️ Please fill all the required fields before submitting!");
+            } else {
+                alert("✅ Job form submitted successfully!");
+                // Yahan aap backend integration/additional code likh sakte ho
+            }
+        });
+    </script>
+</body>
+
+</html>

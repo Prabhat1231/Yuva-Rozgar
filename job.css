@@ -1,0 +1,105 @@
+/* Background with photo */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.overlay {
+    min-height: 100vh;
+    background: url("https://media.gettyimages.com/id/185404583/photo/register.jpg?s=612x612&w=0&k=20&c=yTfc8oZhQWP6jVEb2fvb4ZdnUiwjGzg89b6b7q0AdWo=") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+}
+
+
+/* White box form */
+
+.form-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+
+/* Form Groups */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: block;
+    color: #222;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    transition: border 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0073e6;
+    outline: none;
+}
+
+
+/* Two in one row */
+
+.form-row {
+    display: flex;
+    gap: 30px;
+    /* Yahan gap badha diya */
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+
+/* Two in one row */
+
+
+/* Button */
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0073e6;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #005bb5;
+}

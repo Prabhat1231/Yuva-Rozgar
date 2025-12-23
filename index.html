@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuva Rozgar Portal</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Yuva Rozgar</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="">Home</a></li>
+                <li><a href="/JOB_DETAILS/job.html">JOB_DETAILS</a></li>
+
+                <li><a href="/CONS/script.html">CONSULTANCY</a></li>
+                <li><a href="/jobseekr/jobseevs.html">JOBSEEKR</a></li>
+                <li><a href="#about">ABOUT</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="/LOGIN/auth.html" class="btn btn-login"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="/SIGNUP/sign.html" class="btn btn-signup"><i class="fas fa-user-plus"></i> Sign Up</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </nav>
+        <!-- Modern Marquee (below header) -->
+        <!-- Modern Marquee (below header) -->
+
+        <section>
+            <div class="marquee-bar">
+                <div class="marquee-content">
+                    🔔 Welcome to <b>Yuva Rozgar</b> – India’s #1 Youth Employment Platform &nbsp; | &nbsp; 💼 12,000+ Verified Job Openings Updated Daily &nbsp; | &nbsp; 🎯 Top Employers Across IT, Marketing, Govt & More &nbsp; | &nbsp; 🚀 Sign Up Now
+                    to Get Personalized Job Alerts Instantly!
+                </div>
+            </div>
+        </section>
+
+        <section class="hero-section">
+            <!-- Slides -->
+            <div class="slide active" style="background-image: url('https://media.istockphoto.com/id/1346125184/photo/group-of-successful-multiethnic-business-team.jpg?s=2048x2048&w=is&k=20&c=EA5GGz38Vh8XzvXI2rBswZqGG5yS0FdibX2soQDLP3Y=');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="slide" style="background-image: url('https://media.istockphoto.com/id/2169875608/photo/business-network-concept-human-resources-group-of-businesspeople-management-strategy.webp?a=1&b=1&s=612x612&w=0&k=20&c=CLJze22Dg3xZoWnkrrWtjfMA0xuFNKWK_igWSpZNMVQ=');"></div>
+
+            <!-- Dots -->
+            <div class="dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const slides = document.querySelectorAll('.slide');
+                const dots = document.querySelectorAll('.dot');
+                let currentIndex = 0;
+
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle('active', i === index);
+                        dots[i].classList.toggle('active', i === index);
+                    });
+                }
+
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    showSlide(currentIndex);
+                }
+
+                let slideInterval = setInterval(nextSlide, 5000);
+
+                dots.forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        currentIndex = parseInt(dot.dataset.index);
+                        showSlide(currentIndex);
+                        clearInterval(slideInterval); // stop auto-slide on click
+                        slideInterval = setInterval(nextSlide, 5000); // restart auto-slide
+                    });
+                });
+            });
+        </script>
+
+
+        <!-- JavaScript -->
+
+
+
+        <!-- Find Job -->
+        <section class="find-job">
+            <div class="find-job-content">
+                <h1>Find Your <span class="highlight">Dream Job</span></h1>
+                <p>Search from thousands of opportunities across India.</p>
+
+
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Job Title, Skills, or Keywords">
+                    <input type="text" placeholder="Location">
+                    <button class="btn-search"><i class="fas fa-search"></i> Search</button>
+                </div>
+
+                <!-- Job Categories -->
+                <div class="job-categories">
+                    <h3>Popular Categories</h3>
+                    <div class="categories-list">
+                        <span><i class="fas fa-laptop-code"></i> IT & Software</span>
+                        <span><i class="fas fa-bullhorn"></i> Marketing</span>
+                        <span><i class="fas fa-coins"></i> Finance</span>
+                        <span><i class="fas fa-briefcase"></i> Fresher Jobs</span>
+                        <span><i class="fas fa-university"></i> Govt Jobs</span>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="job-stats">
+                    <div class="stat-box" style="background: linear-gradient(135deg, #4facfe, #00f2fe); color: #fff;">
+                        <h2>10,000+</h2>
+                        <p>Active Jobs</p>
+                        <div class="ratings">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="stat-box" style="background: linear-gradient(135deg, #43e97b, #38f9d7); color: #fff;">
+                        <h2>2,000+</h2>
+                        <p>Top Employers</p>
+                        <div class="ratings">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="stat-box" style ;lma;lsmfg nklnklnsddnn mmdsflm[m[dd[for (const kosp in object) { }]]]="background: linear-gradient(135deg, #fa709a, #fee140); color: #fff;">
+                        <h2>1M+</h2>
+                        <p>Job Seekers</p>
+                        <div class="ratings">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- ===== end employer reviews ===== -->
+
+
+                <!-- Call to Action -->
+                <div class="cta-employer">
+                    <p>Are you an Employer?</p>
+                    <a href="/employ/script.html" class="btn-post-job"><i class="fas fa-plus-circle"></i> Post a Job</a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- About Section -->
+        <!-- About -->
+        <section id="about" class="about">
+            <div class="about-text">
+                <h2>About <span>Yuva Rozgar</span></h2>
+                <p>
+                    Yuva Rozgar is India’s most trusted job portal connecting job seekers with employers and consultants. Our mission is to empower the youth with the right career opportunities, skill-building resources, and expert guidance.
+                </p>
+                <p>
+                    Whether you are a fresher starting your career or an experienced professional aiming for growth, Yuva Rozgar ensures you get access to the best opportunities across India.
+                </p>
+                <a href="#about" class="btn-about">Learn More</a>
+            </div>
+            <div class="about-img">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="About Yuva Rozgar">
+            </div>
+        </section>
+
+
+        <!-- Features -->
+        <!-- Features -->
+        <section class="features">
+            <h2>Why Choose <span class="highlight">Yuva Rozgar</span>?</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Top Employers</h3>
+                    <p>Access verified job postings from India’s leading companies and grow your career with the best opportunities.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Skill Development</h3>
+                    <p>Enhance your skills with free resources, online courses, and training programs tailored to your growth.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Trusted Platform</h3>
+                    <p>Safe, reliable, and transparent portal connecting job seekers with top recruiters across India.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">Courses</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>Email: support@yuvarozgar.in</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer-bottom">© 2025 Yuva Rozgar. All Rights Reserved.</p>
+        </footer>
+
+        <!-- Scripts -->
+        <script>
+            function toggleMenu() {
+                document.getElementById("navLinks").classList.toggle("active");
+            }
+
+            // Slider Logic
+            let slides = document.querySelectorAll(".slide");
+            let dotsContainer = document.querySelector(".dots");
+            let index = 0;
+
+            slides.forEach((_, i) => {
+                let dot = document.createElement("span");
+                if (i === 0) dot.classList.add("active");
+                dot.addEventListener("click", () => showSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+
+            let dots = document.querySelectorAll(".dots span");
+
+            function showSlide(i) {
+                slides.forEach((slide, idx) => {
+                    slide.classList.remove("active");
+                    dots[idx].classList.remove("active");
+                });
+                slides[i].classList.add("active");
+                dots[i].classList.add("active");
+                index = i;
+            }
+
+            function autoSlide() {
+                index = (index + 1) % slides.length;
+                showSlide(index);
+            }
+
+            setInterval(autoSlide, 4000);
+        </script>
+</body>
+
+</html>

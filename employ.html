@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Registration Form</title>
+    <link rel="stylesheet" href="employ.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Employer Registration</h2>
+        <form>
+
+            <!-- Employee ID -->
+            <div class="form-row">
+                <label><i class="fas fa-id-card"></i> Employee ID</label>
+                <input type="text" name="employee_id" placeholder="Unique Employee ID">
+                <small>Enter a unique ID (e.g., E001, E002...)</small>
+            </div>
+
+            <!-- Entity Name -->
+            <div class="form-row">
+                <label><i class="fas fa-building"></i> Entity Name</label>
+                <input type="text" name="entity_name" placeholder="Company Name">
+                <small>Enter your company’s registered name</small>
+            </div>
+
+            <!-- Description -->
+            <div class="form-row">
+                <label><i class="fas fa-info-circle"></i> Description</label>
+                <textarea name="description" rows="2" placeholder="Brief description"></textarea>
+                <small>Write a short company profile</small>
+            </div>
+
+            <!-- Company Type -->
+            <div class="form-row">
+                <label><i class="fas fa-briefcase"></i> Company Type</label>
+                <input type="text" name="company_type" placeholder="Private/Public">
+                <small>Specify the type of company</small>
+            </div>
+
+            <!-- Address -->
+            <div class="form-row">
+                <label><i class="fas fa-map-marker-alt"></i> Address</label>
+                <textarea name="address" rows="2" placeholder="Enter full address"></textarea>
+                <small>Provide company office address</small>
+            </div>
+
+            <!-- Country -->
+            <div class="form-row">
+                <label>Country</label>
+                <input type="text" name="country" placeholder="Enter country">
+                <small>Select your company’s country</small>
+            </div>
+
+            <!-- State -->
+            <div class="form-row">
+                <label>State</label>
+                <input type="text" name="state" placeholder="Enter state">
+                <small>Enter state where company is registered</small>
+            </div>
+
+            <!-- City -->
+            <div class="form-row">
+                <label>City</label>
+                <input type="text" name="city" placeholder="Enter city">
+                <small>Enter the company’s city</small>
+            </div>
+
+            <!-- Pin Code -->
+            <div class="form-row">
+                <label>Pin Code</label>
+                <input type="number" name="pin_code" placeholder="Enter pin code">
+                <small>Enter postal code</small>
+            </div>
+
+            <!-- Category -->
+            <div class="form-row">
+                <label>Category</label>
+                <input type="text" name="category" placeholder="IT/Finance/HR...">
+                <small>Select industry category</small>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-row">
+                <label><i class="fas fa-phone"></i> Phone</label>
+                <div class="phone-box">
+                    <select name="country_code">
+            <option value="+91">🇮🇳 +91</option>
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+61">🇦🇺 +61</option>
+          </select>
+                    <input type="tel" name="phone" placeholder="Enter phone number">
+                </div>
+                <small>Enter company’s official contact number</small>
+            </div>
+
+            <!-- Fax -->
+            <div class="form-row">
+                <label>Fax</label>
+                <input type="text" name="fax" placeholder="Fax number">
+                <small>Enter company’s fax (if available)</small>
+            </div>
+
+            <!-- Sales Turnover -->
+            <div class="form-row">
+                <label>Sales Turnover</label>
+                <input type="number" name="sales_turnover" placeholder="Enter sales turnover">
+                <small>Enter annual sales turnover (in INR)</small>
+            </div>
+
+            <!-- No. of Employees -->
+            <div class="form-row">
+                <label>No. of Employees</label>
+                <input type="number" name="no_of_employees" placeholder="Number of employees">
+                <small>Enter total employee count</small>
+            </div>
+
+            <!-- No. of Offices -->
+            <div class="form-row">
+                <label>No. of Offices</label>
+                <input type="number" name="no_of_offices" placeholder="Number of offices">
+                <small>Total number of company branches</small>
+            </div>
+
+            <!-- Factory -->
+            <div class="form-row">
+                <label>Factory</label>
+                <input type="text" name="factory" placeholder="Yes/No">
+                <small>Mention if you have factories</small>
+            </div>
+
+            <!-- Submit Logo -->
+            <div class="form-row">
+                <label>Submit Logo</label>
+                <input type="file" name="submit_logo">
+                <small>Upload company logo (png/jpg)</small>
+            </div>
+
+            <!-- URL -->
+            <div class="form-row">
+                <label>Website URL</label>
+                <input type="url" name="url" placeholder="https://example.com">
+                <small>Enter official company website</small>
+            </div>
+
+            <!-- Create Password -->
+            <div class="form-row">
+                <label>Create Password</label>
+                <input type="password" name="create_password" placeholder="Password">
+                <small>Set a strong password</small>
+            </div>
+
+            <!-- Password Question -->
+            <div class="form-row">
+                <label>Password Question</label>
+                <input type="text" name="password_question" placeholder="e.g., Your first school?">
+                <small>Choose a security question</small>
+            </div>
+
+            <!-- Answer -->
+            <div class="form-row">
+                <label>Answer</label>
+                <input type="text" name="answer" placeholder="Security answer">
+                <small>Provide answer to the question</small>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
